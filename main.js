@@ -1,0 +1,38 @@
+{
+  "name": "controle-sucata",
+  "version": "2.3.1",
+  "description": "Controle Industrial de Sucata",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron.",
+    "build": "electron-builder --win --x64"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.sucata.controle",
+    "productName": "Controle de Sucata",
+    "directories": {
+      "output": "dist"
+    },
+    "publish": null,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
